@@ -105,13 +105,13 @@ A scenario analysis was conducted assuming a **10% reduction in downtime**:
 
 ---
 
-## 🛠 Tools & Technologies
+## Tools & Technologies
 - **SQL Server** – core analytics & KPI logic
 - **Python (pandas, numpy)** – realistic data generation
 - **Power BI** – executive operations dashboard
 
 ---
-## 🔧 Future Enhancements
+## Future Enhancements
 - Production scheduling optimization
 - Scenario parameter controls (Power BI)
 - Integration with demand forecasting
