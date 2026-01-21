@@ -104,15 +104,58 @@ A scenario analysis was conducted assuming a **10% reduction in downtime**:
 - Targeted maintenance and shift improvements offer high ROI
 
 ---
+## Data Versioning & Realism Roadmap
+
+This project currently uses a **Version 1 (v1) synthetic dataset** designed to represent a **steady-state manufacturing baseline**.
+
+### Version 1 – Baseline Operations Model
+The v1 dataset focuses on:
+- Correct operational grain (Line × Shift × Day × Product)
+- Physically valid capacity logic (rated capacity × run hours)
+- Realistic downtime, scrap, and shift structures
+- Clean KPI definitions and data modeling
+
+This version intentionally keeps variability controlled to:
+- Validate KPI calculations and aggregation logic
+- Test SQL queries and Power BI measures
+- Establish a stable operational baseline
+
+As a result, some KPIs (e.g., utilization) may appear relatively stable over time.
+
+---
+
+### Planned Enhancements – Version 2 (Roadmap)
+The next version of the dataset will introduce additional realism layers commonly observed in real manufacturing environments:
+
+- **Seasonality effects**  
+  Peak and slack periods impacting demand, utilization, and downtime
+
+- **Line-specific behavior**  
+  Aging equipment, chronic bottlenecks, and differing reliability profiles
+
+- **Shift-level dynamics**  
+  Fatigue effects, learning curves, and supervision impact on night shifts
+
+- **Operational shock events**  
+  Major breakdowns, maintenance backlogs, or short-term disruptions
+
+These enhancements will allow deeper analysis of:
+- Volatility in capacity utilization
+- Stress behavior during peak demand
+- ROI of targeted downtime reduction strategies
+
+---
+
+### Why This Approach
+In real operations analytics projects, datasets evolve iteratively:
+1. Establish a stable baseline  
+2. Validate logic and KPIs  
+3. Introduce complexity and volatility over time  
+
+This repository follows the same progression.
+
 
 ## Tools & Technologies
 - **SQL Server** – core analytics & KPI logic
 - **Python (pandas, numpy)** – realistic data generation
 - **Power BI** – executive operations dashboard
-
----
-## Future Enhancements
-- Production scheduling optimization
-- Scenario parameter controls (Power BI)
-- Integration with demand forecasting
-- Cost of downtime monetization
